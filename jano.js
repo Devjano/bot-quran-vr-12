@@ -5,7 +5,7 @@ const ytdl = require('ytdl-core');
 
 jano.on('ready', async () => {
   jano.user.setActivity(STATUS + "")
-  let channel = jano.channels.cache.get(CHANNEL) || await client.channels.fetch(CHANNEL)
+  let channel = jano.channels.cache.get(CHANNEL) || await jano.channels.fetch(CHANNEL)
 
   if(!channel) return;
   const connection = await channel.join();
